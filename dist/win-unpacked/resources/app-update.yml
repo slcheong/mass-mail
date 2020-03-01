@@ -1,4 +1,4 @@
-owner: electron
-repo: electron-quick-start
+owner: slcheong
+repo: electron-email-app
 provider: github
-updaterCacheDirName: massmail-updater
+updaterCacheDirName: mass-mail-updater

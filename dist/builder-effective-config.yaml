@@ -1,4 +1,11 @@
 directories:
   output: dist
   buildResources: build
+appId: com.workingelf.massemail
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+        - ia32
 electronVersion: 7.1.9

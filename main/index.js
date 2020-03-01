@@ -142,8 +142,17 @@ extractExcel = (path) => {
          for( j =1; j < worksheet.rowCount; j++){
              var htmlText = document.getElementById("editor").value;
              for (var i = "B".charCodeAt(); i < "A".charCodeAt()+worksheet.columnCount;  i++)
-             {
-                 htmlText = htmlText.split(`{${worksheet.getCell(`${String.fromCharCode(i)}1`).value}}`).join(worksheet.getCell(`${String.fromCharCode(i)}${j+1}`).value);
+             {  
+                 let oldValue =  worksheet.getCell(`${String.fromCharCode(i)}1`).value
+                 let newValue = worksheet.getCell(`${String.fromCharCode(i)}${j+1}`).value
+                 if ( newValue == null)
+                 {
+                    htmlText = htmlText.split(`{${oldValue}}`).join("");
+                 }
+                 else {
+                    htmlText = htmlText.split(`{${oldValue}}`).join(newValue);
+                 }
+                 
              }
              content.push(htmlText);
         }

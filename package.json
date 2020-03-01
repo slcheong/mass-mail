@@ -1,5 +1,19 @@
 {
-  "name": "massmail",
+  "build": {
+    "appId": "com.workingelf.massemail",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    }
+  },
+  "name": "mass-mail",
   "version": "1.0.0",
   "description": "Sending bulk custom email with ease",
   "main": "main.js",
@@ -7,7 +21,7 @@
     "start": "electron .",
     "watch": "nodemon --watch * --exec electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/slcheong/electron-email-app",
   "keywords": [
     "Email",
     "bulk",

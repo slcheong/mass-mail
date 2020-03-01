@@ -17,7 +17,7 @@ emailPreview = (num) => {
 document.getElementById("sampleSelector").setAttribute("max", email.length);
 document.getElementById("sampleSelector").setAttribute("value", 1);
 document.getElementById("totalEmail").innerHTML = email.length;
-emailPreview(1);
+emailPreview(0);
 
 
 document.querySelector('#close').addEventListener("click", function(){
@@ -26,7 +26,7 @@ document.querySelector('#close').addEventListener("click", function(){
 
 document.querySelector('#form2').addEventListener("submit", function(e){
     e.preventDefault();
-
+    returnError();
     let emailAdd = document.getElementById("emailAdd").value;
     let password = document.getElementById("pswd").value;
     let test = validateField(emailAdd, password);
@@ -106,6 +106,7 @@ toggleButton = (hide) =>{
 async function sendemail(emailAdd, password) {
   
     toggleButton(true)
+   
     let sentMail = []
 
     const transporter = nodemailer.createTransport({
