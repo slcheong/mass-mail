@@ -3,3 +3,5 @@ To enabled the software to send email via your gmail, less secure app access mus
 
 
 You can upload a excel that contains list of emails and relevant variables, and write a email that will pick up relevant variables. Clicks around and try it yourself. It should be intuitive. 
+
+You can find the installer or exe file inside dist folder. The source code is available if you want to build for linux or mac. 
